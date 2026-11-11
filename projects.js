@@ -16,8 +16,7 @@
     emoji       – shown when there's no image
     featured    – true to highlight it
 
-  The three below are EXAMPLES — delete or replace them as you
-  build real projects.
+  Add your real projects above "This Portfolio" as you build them.
 */
 
 const PROJECTS = [
@@ -32,30 +31,6 @@ const PROJECTS = [
     image: "",
     emoji: "🧑‍💻",
     featured: true,
-  },
-  {
-    title: "Example: Weather App",
-    description:
-      "Placeholder project. Replace this with a real one — e.g. an app that shows the forecast for any city using a public weather API.",
-    tags: ["JavaScript", "API"],
-    date: "Coming soon",
-    demo: "",
-    code: "",
-    image: "",
-    emoji: "⛅",
-    featured: false,
-  },
-  {
-    title: "Example: Python Game",
-    description:
-      "Placeholder project. Replace this with a real one — e.g. a small game built with Python and Pygame.",
-    tags: ["Python"],
-    date: "Coming soon",
-    demo: "",
-    code: "",
-    image: "",
-    emoji: "🎮",
-    featured: false,
   },
 ];
 

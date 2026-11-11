@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>kasra122 — Developer Portfolio</title>
+  <meta name="description" content="Coding projects, experiments and things I've built." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo"><span class="accent">&lt;</span>K<span class="accent">/&gt;</span></a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <p class="mono eyebrow">Hi, my name is</p>
+        <h1>kasra122.</h1>
+        <h2 class="hero-sub">I build things for the web<span class="cursor">_</span></h2>
+        <p class="lead">
+          I'm a developer learning by building. This is where I keep everything I make —
+          from small experiments to full projects.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">See my projects</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+        <div class="stats">
+          <div><strong id="statProjects">0</strong><span>Projects</span></div>
+          <div><strong id="statTech">0</strong><span>Technologies</span></div>
+          <div><strong>∞</strong><span>Things to learn</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container about">
+        <div>
+          <h2 class="section-title"><span class="mono accent">01.</span> About me</h2>
+          <p>
+            Write a few sentences about yourself here: what got you into coding, what you enjoy
+            building, and what you're learning right now.
+          </p>
+          <p>
+            I'm currently focused on building real projects and sharing them here as I go.
+            Each project on this page links to its live demo and source code.
+          </p>
+        </div>
+        <div class="avatar" aria-hidden="true">
+          <span>K</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2 class="section-title"><span class="mono accent">02.</span> Skills &amp; tools</h2>
+        <div class="skills" id="skillsList"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="mono accent">03.</span> Projects</h2>
+        <p class="muted">Filter by technology:</p>
+        <div class="filters" id="filters"></div>
+        <div class="grid" id="projectGrid"></div>
+        <p class="empty muted" id="emptyMsg" hidden>No projects yet — coming soon!</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container contact">
+        <h2 class="section-title center"><span class="mono accent">04.</span> Get in touch</h2>
+        <p class="lead center">
+          Have a question, an idea, or just want to say hi? My inbox is open.
+        </p>
+        <a class="btn btn-primary" href="https://github.com/kasra122" target="_blank" rel="noopener">Find me on GitHub 👋</a>
+        <div class="socials">
+          <a href="https://github.com/kasra122" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="muted">© <span id="year"></span> kasra122 · Built from scratch with HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- Project modal -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="icon-btn modal-close" data-close aria-label="Close">✕</button>
+      <div class="modal-thumb" id="modalThumb"></div>
+      <h3 id="modalTitle"></h3>
+      <p class="muted mono" id="modalDate"></p>
+      <p id="modalDesc"></p>
+      <div class="tags" id="modalTags"></div>
+      <div class="modal-links" id="modalLinks"></div>
+    </div>
+  </div>
+
+  <script src="projects.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
